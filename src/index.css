@@ -1,13 +1,292 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  list-style: none;
+  /* border: solid green; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* NavBar styles */
+.nav-bar {
+  position: relative;
+  z-index: 5;
+
+}
+.nav-content,
+.nav-content .logo {
+  display: flex;
+  align-items: center;
+}
+.nav-content {
+  justify-content: space-between;
+  box-shadow: 4px 4px 8px rgba(0,0,0,.2);
+  padding: 20px;
+}
+.nav-content .logo {
+  gap: 20px;
+  margin-right: auto;
+}
+.nav-content .logo img {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+.nav-content .links {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.nav-content .links nav {
+  display: flex;
+  gap: 20px;
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+.nav-content .links nav a {
+  color: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px;
+}
+.nav-content .links nav a.active{
+  background-color: rgb(97, 97, 239);
+  border-radius: 4px;
+}
+.nav-content .links .socials {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.nav-content .links nav .login{
+  padding: 10px 20px;
+  background-color: purple;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+}
+/* .nav-content .links .socials >*{
+  margin-left: 10px;
+} */
+.nav-content .links .socials a {
+  padding: 10px 18px;
+  background-color: blue;
+  color: white;
+  border-radius: 30px;
+}
+.hamburger {
+  display: none;
+}
+
+/* SingIn Styles */
+.page-title{
+  text-align: center;
+  background-color: rgb(4, 4, 76);
+  color: #fff;
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 20px;
+}
+.signIn-form .fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 700px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .2);
+  margin: 30px auto;
+  padding: 40px;
+  border: none;
+}
+.signIn-form .fieldset label{
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+.signIn-form .fieldset input{
+  padding: 10px 16px;
+  width: 500px;
+}
+
+.signIn-form .fieldset button{
+  align-self: flex-end;
+  padding: 8px 30px;
+  color: #fff;
+  background: blue;
+  border: none;
+  border-radius: 20px;
+}
+  /* Blog post styles */
+.posts-field{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+  border: 2px solid #0000;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .2);
+  width: 700px;
+  margin: 50px auto;
+
+}
+.posts-field label{
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.posts-field input{
+  padding: 10px 16px;
+  width: 500px;
+}
+.posts-field textarea{
+  padding: 10px;
+  font-size: 18px;
+  resize: none;
+ 
+}
+.posts-field button{
+  color: white;
+  background: blue;
+  padding: 10px 40px;
+  border-radius: 20px;
+border: none;
+}
+
+.landing-page{
+  display: flex;
+  justify-content: space-between;
+  background: rgb(146, 5, 217);
+  padding: 40px;
+  align-items: center;
+}
+.landing-page img{
+  width: 50%;
+  aspect-ratio: 2/2;
+  border-radius: 10px;
+}
+.landing-page h1{
+  color: #fff;
+}
+.landing-page a{
+  padding: 20px;
+  background-color: lightcoral;
+  color: #fff;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 30px;
+}
+/* About Us styles */
+
+.my-card {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  flex-direction: column;
+  padding: 30px;
+  border: 2px solid #0000;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .2);
+  width: 700px;
+  margin: 50px auto;
+  background-color: rgba(104, 150, 215, 0.6);
+}
+
+.page-title{
+  text-align: center;
+  background-color: rgb(4, 4, 76);
+  color: #fff;
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 20px;
+
+}
+
+
+@media only screen and (max-width: 1040px) {
+  *{
+    /* border: 1px solid red */
+  }
+  .nav-content .links {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(104, 150, 215, 0.6);
+    box-shadow: 4px 4px 8px rgba(0,0,0,.2);
+    top: 90px;
+    left: -200%;
+    transition: all 1s;
+    backdrop-filter: blur(10px);
+    gap: 40px;
+    padding: 20px;
+  }
+  .nav-content .links nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+  .nav-content .links.return{
+    left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .signIn-form .fieldset {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 10px; 
+    justify-content: center;
+  }
+  .signIn-form .fieldset input{
+    padding: 12px 16px;
+    max-width: 100%;
+  }
+  
+  .signIn-form .fieldset button{
+    align-self: center;
+    padding: 8px 30px;
+  }
+  .fieldset .password, .fieldset .email{
+    max-width: 100%;
+  }
+  .nav-content .logo img {
+    width: 15%;
+  }
+  .page-title{
+    padding: 10px;
+  }
+  .nav-content .logo{
+    gap: 10px;
+  }
+  .nav-content .logo h1{
+    font-size: 22px;
+  }
+  /* Blog post styles */
+  .posts-field{
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+  
+  }
+  .posts-field textarea {
+   width: 320px;/* Fixed width */
+   height: 200px;
+  }
+  .posts-field label, .posts-field input{
+    max-width: 320px;
+  }
+  
 }
